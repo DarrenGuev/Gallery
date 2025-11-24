@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Strawhats Gallery</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <style>
+    body {
+      font-family: 'Poppins';
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary shadow rounded-bottom-5">
+    <div class="container ps-lg-0">
+      <a class="navbar-brand" href="#"><img src="images/banner.png" style="width: 120px;" alt="..."></a>
+      <div class="d-flex d-lg-none align-items-center">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="#navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <button class="nav-link small text-body ms-3 me-2 border-0 bg-transparent" id="mode" type="button"
+          onclick="changeMode()"><i class="bi bi-moon-fill"></i></button>
+      </div>
+      <button class="navbar-toggler d-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="#navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link small text-body ms-3 pe-4 active" aria-current="page" href="#">Home</a>
+          <a class="nav-link small text-body mx-3" href="#crew">Crew</a>
+          <button class="nav-link small text-body ms-2 border-0 bg-transparent d-none d-lg-inline" id="mode-lg"
+            type="button" onclick="changeMode()"><i class="bi bi-moon-fill"></i></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div id="home" class="position-relative d-flex align-items-center justify-content-center"
+    style="min-height: 95vh; background: url('images/flag.png') center/cover no-repeat fixed;">
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-black opacity-50"></div>
+    <div class="container position-relative">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 text-white text-center">
+          <h1 class="display-1 fw-bold mb-3" style="color: white; text-shadow: 0 4px 15px rgba(0,0,0,0.9);">
+            Strawhat Pirates
+          </h1>
+          <p class="lead fs-4 mb-5 text-light opacity-75">
+            Welcome to the Strawhat Pirates Gallery! Explore the crew members of the Strawhat Pirates from the world of
+            One Piece. Discover their unique abilities, roles, and bounties as you navigate through this collection of
+            iconic characters.
+          </p>
+          <a href="#crew" class="btn btn-light btn-lg">See the Strawhats</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="crew" class="container">
+    <div class="row mt-5">
+      <div class="col">
+        <div class="display-4 fw-bold mb-5">
+          Strawhat Pirates Crew
+        </div>
+      </div>
+    </div>
+    <div class="row" id="container">
+
+    </div>
+  </div>
+
+  <div class="container-fluid py-3" style="min-height: 10vh; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-4 text-black d-flex justify-content-center align-items-center text-center pt-3 pt-md-0">
+        <p class="mb-0">Created by <b>Darren</b></p>
+      </div>
+      <div class="col-md-4 text-black d-flex justify-content-center align-items-center text-center">
+        <img src="images/logo.png" alt="footer logo" style="height: 140px;">
+      </div>
+      <div class="col-md-4 text-black d-flex justify-content-center align-items-center text-center pb-3 pb-md-0">
+        <a href="https://github.com/DarrenGuev" class="btn btn-outline-dark btn-lg me-2" aria-label="GitHub"><i
+            class="bi bi-github fs-4"></i></a>
+        <a href="https://www.facebook.com/MDFG.NERRAD/" class="btn btn-outline-dark btn-lg me-2"
+          aria-label="Facebook"><i class="bi bi-facebook fs-4"></i></a>
+        <a href="https://www.linkedin.com/in/darren-guevarra-21644b363/" class="btn btn-outline-dark btn-lg"
+          aria-label="LinkedIn"><i class="bi bi-linkedin fs-4"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
+  <script>
+    var strawhatCrew = [
+      {
+        "name": "Monkey D. Luffy",
+        "knownAs": "Straw Hat Luffy",
+        "bounty": "3,000,000,000 Beli",
+        "devilFruit": "Gomu Gomu no Mi",
+        "role": "Captain",
+        "image": "luffy.png"
+      },
+      {
+        "name": "Roronoa Zoro",
+        "knownAs": "Pirate Hunter",
+        "bounty": "1,111,000,000 Beli",
+        "devilFruit": "None",
+        "role": "Swordsman, Right-hand man of Luffy",
+        "image": "zoro.png"
+      },
+      {
+        "name": "Nami",
+        "knownAs": "Cat Burglar",
+        "bounty": "366,000,000 Beli",
+        "devilFruit": "None",
+        "role": "Navigator",
+        "image": "nami.png"
+      },
+      {
+        "name": "Usopp",
+        "knownAs": "God Usopp",
+        "bounty": "500,000,000 Beli",
+        "devilFruit": "None",
+        "role": "Sniper",
+        "image": "usopp.png"
+      },
+      {
+        "name": "Vinsmoke Sanji",
+        "knownAs": "Black Leg",
+        "bounty": "1,032,000,000 Beli",
+        "devilFruit": "None",
+        "role": "Cook",
+        "image": "sanji.png"
+      },
+      {
+        "name": "Tony Tony Chopper",
+        "knownAs": "Cotton Candy Lover",
+        "bounty": "100 Beli",
+        "devilFruit": "Hito Hito no Mi (Human-Human Fruit)",
+        "role": "Doctor",
+        "image": "chopper.png"
+      },
+      {
+        "name": "Nico Robin",
+        "knownAs": "DEVIL CHILD",
+        "bounty": "930,000,000 Beli",
+        "devilFruit": "Hana Hana no Mi (Flower-Flower Fruit)",
+        "role": "Archaeologist",
+        "image": "robin.png"
+      },
+      {
+        "name": "Franky",
+        "knownAs": "CYBORG",
+        "bounty": "394,000,000 Beli",
+        "devilFruit": "None",
+        "role": "Shipwright",
+        "image": "franky.png"
+      },
+      {
+        "name": "Brook",
+        "knownAs": "SOUL KING",
+        "bounty": "383,000,000 Beli",
+        "devilFruit": "None",
+        "role": "Musician",
+        "image": "brook.png"
+      },
+      {
+        "name": "Jinbe",
+        "knownAs": "Knight of the Sea",
+        "bounty": "1,100,000,000 Beli",
+        "devilFruit": "None",
+        "role": "Helmsman",
+        "image": "jinbe.png"
+      }
+    ]
+
+    var container = document.getElementById("container");
+    for (var i = 0; i < strawhatCrew.length; i++) {
+      container.innerHTML += `
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 pb-4">
+            <div class="card h-100 bg-transparent shadow rounded-3">
+                <div class="ratio ratio-4x3 overflow-hidden rounded-top-3">
+                    <img src="images/` + strawhatCrew[i].image + `" alt="..." class="img-fluid">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title text-black mb-4"> ` + strawhatCrew[i].name + `</h4>
+                    <p class="card-text text-black"><b>Alias:</b> "` + strawhatCrew[i].knownAs + `"</p>
+                    <p class="card-text text-black"><b>Bounty:</b> ` + strawhatCrew[i].bounty + `</p>
+                    <p class="card-text text-black"><b>Devil Fruit:</b> ` + strawhatCrew[i].devilFruit + `</p>
+                    <p class="card-text text-black"><b>Role:</b> ` + strawhatCrew[i].role + `</p>
+                </div>
+            </div>
+        </div>
+      `;
+    }
+
+    function changeMode() {
+      const isDark = document.documentElement.getAttribute('data-bs-theme') === 'dark';
+      document.documentElement.setAttribute('data-bs-theme', isDark ? 'light' : 'dark');
+      document.querySelectorAll('#mode i, #mode-lg i').forEach(icon => {
+        icon.className = isDark ? 'bi bi-moon-fill' : 'bi bi-sun-fill';
+      });
+
+      document.querySelectorAll('.text-black, .text-white').forEach(element => {
+        element.classList.toggle('text-black');
+        element.classList.toggle('text-white');
+      });
+
+      document.querySelectorAll('.btn-outline-dark, .btn-outline-light').forEach(element => {
+        element.classList.toggle('btn-outline-dark');
+        element.classList.toggle('btn-outline-light');
+      });
+    }
+  </script>
+</body>
+
+</html>
